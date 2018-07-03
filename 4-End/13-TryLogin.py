@@ -1,12 +1,7 @@
 import sys
-from PySide2.QtWidgets import QApplication,QMainWindow
-#from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QWidget,QHBoxLayout,QFormLayout,QVBoxLayout,QLabel,QLineEdit,QPushButton,QFrame
-from PySide2.QtWidgets import QMenu,QToolBar,QStatusBar
-from PySide2.QtCore import SIGNAL,QSize,Qt
-from PySide2.QtGui import QImage,QPixmap,QPalette,QBrush
-from PySide2.QtWidgets import QGraphicsView,QGraphicsScene,QGraphicsPixmapItem
-
+from PySide2.QtWidgets import QApplication,QMainWindow,QStatusBar,QWidget,QHBoxLayout,QFrame,QVBoxLayout,QFormLayout,QLabel,QLineEdit,QPushButton
+from PySide2.QtCore import Qt,SIGNAL
+from PySide2.QtGui import QPalette,QBrush,QPixmap
 
 class Main_Window(QMainWindow):
     '''Our Main Class Window'''
