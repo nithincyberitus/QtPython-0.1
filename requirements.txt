@@ -1,8 +1,10 @@
 astroid==1.6.5
+autopep8==1.3.5
 isort==4.3.4
 lazy-object-proxy==1.3.1
 mccabe==0.6.1
 pkg-resources==0.0.0
+pycodestyle==2.4.0
 pylint==1.9.2
 PySide2==5.9.0a1.dev1528453888
 six==1.11.0
