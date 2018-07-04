@@ -3,6 +3,8 @@ from PySide2.QtWidgets import QApplication,QMainWindow,QDesktopWidget
 from PySide2.QtWidgets import QWidget,QHBoxLayout,QFrame,QLabel,QFormLayout,QLineEdit,QPushButton
 from PySide2.QtGui import QImage,QPixmap
 from PySide2.QtCore import Qt,SIGNAL
+import requests
+from requests.auth import HTTPBasicAuth
 
 class Main_Window(QMainWindow):
     def __init__(self):
@@ -102,12 +104,21 @@ class Layout_Child_2(QWidget):
         self.connect(self.Button_Login,SIGNAL("clicked()"),self.Check_Login_Details)
 
     def Check_Login_Details(self):
+        
         self.username = self.Txt_User_Name.text()
         self.password = self.Txt_User_Password.text()
-        print(self.username)
-        print(self.password)
-        return
 
+        url = 'http://127.0.0.1:5000/auth/user'
+        
+        payload = {'username':self.username,'password':self.password}
+        
+        resp = requests.post(url,params=payload)
+        #print(resp.status_code)
+
+        if resp.status_code == 200:
+            # Go to New Window
+        else:
+            #Show Error
 
 
 
