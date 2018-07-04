@@ -102,6 +102,10 @@ class Layout_Child_2(QWidget):
         self.connect(self.Button_Login,SIGNAL("clicked()"),self.Check_Login_Details)
 
     def Check_Login_Details(self):
+        self.username = self.Txt_User_Name.text()
+        self.password = self.Txt_User_Password.text()
+        print(self.username)
+        print(self.password)
         return
 
 
