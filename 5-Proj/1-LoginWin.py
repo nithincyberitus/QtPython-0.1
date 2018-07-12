@@ -3,8 +3,8 @@ from PySide2.QtWidgets import QApplication,QMainWindow,QDesktopWidget
 from PySide2.QtWidgets import QWidget,QHBoxLayout,QFrame,QLabel,QFormLayout,QLineEdit,QPushButton
 from PySide2.QtGui import QImage,QPixmap
 from PySide2.QtCore import Qt,SIGNAL
-import requests
-from requests.auth import HTTPBasicAuth
+#import requests
+#from requests.auth import HTTPBasicAuth
 
 class Main_Window(QMainWindow):
     def __init__(self):
@@ -72,8 +72,6 @@ class Layout_Child_1(QFrame):
     def setUp_GUI(self):
         self.label = QLabel()
         self.image = QImage('sec_shield.png')
-         # To scale image for example and keep its Aspect Ration
-        #self.image.scaled(0,0,aspectRatioMode=Qt.IgnoreAspectRatio,transformMode=Qt.FastTransformation)
         self.label.setPixmap(QPixmap.fromImage(self.image))
         self.layout = QHBoxLayout()
         self.layout.addWidget(self.label)
@@ -112,13 +110,15 @@ class Layout_Child_2(QWidget):
         
         payload = {'username':self.username,'password':self.password}
         
-        resp = requests.post(url,params=payload)
+        resp = None#requests.post(url,params=payload)
         #print(resp.status_code)
 
         if resp.status_code == 200:
             # Go to New Window
+            pass
         else:
             #Show Error
+            pass
 
 
 
